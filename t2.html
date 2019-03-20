@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>palindrome</title>
+	<script>
+		function palindrome()
+		{
+			var str=String(document.getElementById("str").value);
+			var temp=0;
+			for(var i=0;i<str.length;i++)
+			{
+				if(str[i]!=str[str.length-i-1]){
+					temp=1;
+					break;
+				}
+			}
+			if(temp==0){
+			console.log("YES");
+			document.getElementById("result").innerHTML="YES";}
+			else{
+			console.log("NO");
+			document.getElementById("result").innerHTML="NO";}
+		}
+	</script>
+</head>
+<body>
+<form>
+	String<input type="text" name="sname" id="str" >
+	<button type="button" onclick="palindrome()" name="button">Is Palindrome</button>
+	<p id="result"></p>
+</form>
+</body>
+</html>

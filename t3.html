@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Combinations</title>
+	<script>
+		function combinations()
+		{
+			var str=String(document.getElementById("str").value);
+			for(var i=0;i<str.length;i++,"\n")
+			{
+				for(var j=i;j<str.length;j++,"\n")
+				{
+					console.log(str.slice(i,j+1));
+					document.write(str.slice(i,j+1)+ " ");}
+				}
+			}
+	</script>
+</head>
+<body>
+<form>
+	String<input type="text" name="sname" id="str" >
+	<button type="button" onclick="combinations()" name="button">All Possible Combinations</button>
+	
+</form>
+</body>
+</html>

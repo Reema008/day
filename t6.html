@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Longest Word</title>
+	<script>
+		function longestWord()
+		{
+			var str=String(document.getElementById("str").value);
+			var count,max=0,i=0;
+			while(i!=str.length){
+				count=0;
+				for(var j=i;str[j]!=" "||j!=str.length;j++)
+				{
+					count++;
+				}
+				if(count>max)
+				{
+					max=count;
+					index=i;
+				}
+				i=i+count+1;
+				}
+			for(var k=index;str[k]!=" ";k++){
+			console.log(str[k]);
+			document.write(str[k]);}
+		}
+	</script>
+</head>
+<body>
+<form>
+	String<input type="text" name="sname" id="str" >
+	<button type="button" onclick="longestWord()" name="button">Longest Word</button>
+</form>
+</body>
+</html>

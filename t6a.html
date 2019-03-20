@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		//var str="zxydafgh";
+		function alpha()
+		{
+			var i,c=0,len;
+			var string=String(document.getElementById("string").value);
+			var string1="";
+			var longword='';
+			var max=0;
+			for(i=0;i<string.length;i++)
+			{
+				if(string[i]!=" ")
+				{
+					c++;
+				}
+				else
+				{
+					c=0;
+					string1='';
+					//max=string1.length;
+				}
+				string1=string1+string[i];
+				//string1="";
+				len=string1.length;
+				if(len>max)
+				{
+					max=len;
+					longword=string1;
+
+				}
+			}
+			document.write(longword);
+			
+
+				
+		}
+		
+	
+		
+			
+			
+		
+	</script>
+</head>
+<body>
+	<form>
+		number1<input type="text" sname="string" id="string">
+		<br>
+		
+		<button type="button" onclick="alpha();" name="button">alpha</button>
+		
+	</form>
+	
+</body>
+</html>
