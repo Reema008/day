@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function random()
+		{
+			var string=String(document.getElementById("str").value);
+			var str1="";
+			for(var i=0;i<string.length;i++)
+			{
+				str1=str1+string[Math.floor(Math.random()*10)];
+			}
+			document.write(str1);
+		}
+	</script>
+
+</head>
+<body>
+	<form>
+		string<input type="text" sname="str" id="str">
+		<button type="text" sname="button" onclick="random();">Random</button>
+	</form>
+
+</body>
+</html>
+
